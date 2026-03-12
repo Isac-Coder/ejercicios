@@ -6,6 +6,10 @@ from limpiar_pantalla import limpiar_pantalla
 limpiar_pantalla()
 print("Bienvenido a la cafetería. \n")
 bebida = input("Ingrese la bebida que desea (1 = café, 2 = té, 3 = jugo): \n").lower()
+if bebida not in ["1", "2", "3", "café", "té", "jugo"]:
+    print("Bebida no válida. Intente nuevamente.")
+    exit()
+
 unidades = input("Ingrese la cantidad de unidades que desea: \n")
 
 if unidades != int:
