@@ -10,7 +10,7 @@ try:
         tarifa = 5000
         print(f"El costo total es: $ {tarifa} pesos.")
     elif horas >= 2:
-        tarifa = tarifa + 3000 * (horas - 1)
+        tarifa = tarifa + 3000 * (horas)
         print(f"El costo total es: $ {tarifa} pesos.")
 
 except ValueError:
