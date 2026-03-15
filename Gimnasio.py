@@ -1,19 +1,23 @@
 from limpiar_pantalla import limpiar_pantalla
 
-print("Bienvenido al gimnasio.: \n")
-EDAD = input("Ingrese su edad: \n")
-
 limpiar_pantalla()
-if EDAD != int:
-    print("Edad no válida. Intente nuevamente.")
-elif EDAD < 13 and EDAD >= 0:
-    print("Lo siento, no puedes ingresar al gimnasio.")
-elif EDAD >= 13 and EDAD <= 17:
-    print("Usted pertenece al grupo JUVENIL.")
-elif EDAD >= 18 and EDAD <= 59:
-    print("Usted pertenece al grupo GENERAL.")
-elif EDAD >= 60:
-    print("Usted pertenece al grupo SENIOR.")
+print("Bienvenido al gimnasio.")
 
-else:
-    print("Edad no válida. Intente nuevamente.")
+try:
+    EDAD = int(input("Ingrese su edad: "))
+
+    if EDAD < 0:
+        print("Error: La edad no puede ser negativa.")
+    elif EDAD < 13:
+        print("Lo siento, no puedes ingresar al gimnasio.")
+    elif 13 <= EDAD <= 17:
+        print("Usted pertenece al grupo JUVENIL.")
+    elif 18 <= EDAD <= 59:
+        print("Usted pertenece al grupo GENERAL.")
+    else:
+        print("Usted pertenece al grupo SENIOR.")
+
+except ValueError:
+    print("Error: Debe ingresar un número entero válido.")
+
+input("\nPresione Enter para salir...")
