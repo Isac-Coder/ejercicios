@@ -4,6 +4,7 @@ limpiar_pantalla()
 bajo = 0
 medio = 0
 alto = 0
+i = 0
 
 print("--- RENDIMIENTO GIMNASIO ---")
 
@@ -41,6 +42,16 @@ for i in range(1, 6):
         alto += 1
 
 limpiar_pantalla()
+print("RESUMEN")
+if dias < 3:
+    print(nombre, "tiene bajo compromiso")
+    bajo += 1
+elif dias >= 3 and dias <= 4:
+    print(nombre, "tiene compromiso medio")
+    medio += 1
+else:
+    print(nombre, "tiene compromiso alto\n")
+    alto += 1
 
 print("\nRESUMEN")
 print(f"Bajo compromiso:   {bajo}")

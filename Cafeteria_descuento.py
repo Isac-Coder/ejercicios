@@ -75,3 +75,4 @@ while True:
 limpiar_pantalla()
 print("--- FIN DEL DÍA ---")
 print(f"Total acumulado de ventas: ${int(total_dia)}")
+
